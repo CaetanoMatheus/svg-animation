@@ -1,0 +1,43 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  text-align: center;
+}
+
+#front-wheel,
+#back-wheel {
+  animation: wheel 2s linear infinite;
+  transform-origin: center;
+  transform-box: fill-box;
+}
+
+#other-content,
+#hat {
+  animation: other 1s ease-out infinite alternate;
+  transform-origin: bottom;
+}
+
+
+@keyframes wheel {
+  from {
+    transform: rotateZ(0deg);
+  }
+
+  to {
+    transform: rotateZ(360deg);
+  }
+}
+
+@keyframes other {
+  from {
+    transform: rotateX(0deg);
+  }
+
+  to {
+    transform: rotateX(15deg);
+  }
+}
